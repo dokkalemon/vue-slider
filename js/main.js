@@ -37,6 +37,10 @@ const app = new Vue({
             },
         ]
     },
+    create: {
+        setInterval(slideTime, 3000)
+    },
+
     methods: {
         //incrementiamo il numero dell'active slide
         nextSlide() {
@@ -52,5 +56,13 @@ const app = new Vue({
                 this.activeSlide = this.slides.length - 1;
             }
         },
+
+        slideSelect(indexSlide) {
+            this.activeSlide = indexSlide;
+        },
+
+        slideTime() {
+            this.activeSlide++;
+        }
     }
 })
