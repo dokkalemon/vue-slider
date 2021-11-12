@@ -37,9 +37,21 @@ const app = new Vue({
             },
         ]
     },
-    method: {
+    methods: {
         //incrementiamo il numero dell'active slide
-        
+        nextSlide() {
+            this.activeSlide++;
+            if (this.activeSlide > this.slides.length - 1) {
+                this.activeSlide = 0;
+            }
+        },
+
+        prevSlide() {
+            this.activeSlide--;
+            if (this.activeSlide < 0) {
+                this.activeSlide = this.slides.length - 1;
+            }
+        },
 
 
 
