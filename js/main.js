@@ -52,8 +52,5 @@ const app = new Vue({
                 this.activeSlide = this.slides.length - 1;
             }
         },
-
-
-
     }
 })
