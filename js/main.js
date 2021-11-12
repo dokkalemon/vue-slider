@@ -37,8 +37,14 @@ const app = new Vue({
             },
         ]
     },
-    create: {
-        setInterval(slideTime, 3000)
+
+    created() {
+        setInterval(() => {
+            this.activeSlide++;
+            if (this.activeSlide > this.slides.length - 1) {
+                this.activeSlide = 0
+            }
+        }, 3000);
     },
 
     methods: {
@@ -61,8 +67,6 @@ const app = new Vue({
             this.activeSlide = indexSlide;
         },
 
-        slideTime() {
-            this.activeSlide++;
-        }
+       
     }
 })
