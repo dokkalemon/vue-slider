@@ -3,10 +3,13 @@
  */
 
 
+
+
 const app = new Vue({
     el: '#app',
-    data: 
-        slides = [
+    data: {
+        activeSlide: 0,
+        slides: [
             {
                 image: 'img/01.jpg',
                 title: 'Svezia',
@@ -32,5 +35,13 @@ const app = new Vue({
                 title:
                     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             },
-        ],
-});
+        ]
+    },
+    method: {
+        //incrementiamo il numero dell'active slide
+        
+
+
+
+    }
+})
